@@ -1,0 +1,12 @@
+{
+    "$schema": "https://json.schemastore.org/biome.json",
+    "formatter": {
+      "indentStyle": "space",
+      "indentSize": 2
+    },
+    "linter": {
+      "rules": {
+        "quotes": ["error", "double"]
+      }
+    }
+  }
