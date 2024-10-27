@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Button } from "shadcn-ui/button";
+import { Button } from "@/components/ui/button";
 
 function App() {
 	const [message, setMessage] = useState("");
