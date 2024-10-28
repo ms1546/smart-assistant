@@ -1,6 +1,6 @@
-import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
-
+import { Input } from "@/components/ui/input";
+import React, { useState } from "react";
 function App() {
 	const [message, setMessage] = useState("");
 	const [response, setResponse] = useState("");
@@ -18,19 +18,25 @@ function App() {
 	};
 
 	return (
-		<div className="flex flex-col items-center justify-center h-screen bg-gray-50">
-			<h1 className="text-2xl font-bold mb-4">Smart Assistant</h1>
-			<form onSubmit={handleSubmit} className="flex space-x-2">
-				<input
+		<div className="flex flex-col items-center justify-center h-screen bg-gray-100 p-4">
+			<h1 className="text-4xl font-bold mb-8 text-gray-800">Smart Assistant</h1>
+			<form onSubmit={handleSubmit} className="flex space-x-4 w-full max-w-md">
+				<Input
 					type="text"
 					value={message}
 					onChange={(e) => setMessage(e.target.value)}
 					placeholder="Say something..."
-					className="border p-2 rounded-md"
+					className="flex-1"
 				/>
-				<Button type="submit">Send</Button>
+				<Button type="submit" className="px-6">
+					Send
+				</Button>
 			</form>
-			<p className="mt-4">Response: {response}</p>
+			{response && (
+				<p className="mt-6 text-lg text-gray-700">
+					<span className="font-semibold">Response:</span> {response}
+				</p>
+			)}
 		</div>
 	);
 }
