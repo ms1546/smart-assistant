@@ -10,3 +10,27 @@ declare module "@/components/ui/input" {
       InputProps & React.RefAttributes<HTMLInputElement>
     >;
   }
+
+declare module "@/components/ui/button" {
+  import * as React from "react";
+  import { VariantProps } from "class-variance-authority";
+
+  export const buttonVariants: (props?: {
+    variant?: "default" | "destructive" | "outline" | "secondary" | "ghost" | "link";
+    size?: "default" | "sm" | "lg" | "icon";
+    className?: string;
+  }) => string;
+
+  export interface ButtonProps
+    extends React.ButtonHTMLAttributes<HTMLButtonElement>,
+      VariantProps<typeof buttonVariants> {
+    asChild?: boolean;
+  }
+
+  // デフォルトエクスポートを含む Button コンポーネントの定義
+  const Button: React.ForwardRefExoticComponent<
+    ButtonProps & React.RefAttributes<HTMLButtonElement>
+  >;
+
+  export default Button;
+}
