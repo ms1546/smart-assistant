@@ -27,10 +27,7 @@ declare module "@/components/ui/button" {
     asChild?: boolean;
   }
 
-  // デフォルトエクスポートを含む Button コンポーネントの定義
-  const Button: React.ForwardRefExoticComponent<
+  export const Button: React.ForwardRefExoticComponent<
     ButtonProps & React.RefAttributes<HTMLButtonElement>
   >;
-
-  export default Button;
 }
