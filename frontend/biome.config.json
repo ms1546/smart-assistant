@@ -1,12 +1,29 @@
 {
-    "$schema": "https://json.schemastore.org/biome.json",
-    "formatter": {
-      "indentStyle": "space",
-      "indentSize": 2
-    },
-    "linter": {
-      "rules": {
-        "quotes": ["error", "double"]
-      }
+  "$schema": "https://json.schemastore.org/biome.json",
+  "formatter": {
+    "indentStyle": "space",
+    "indentSize": 2,
+    "lineWidth": 80,
+    "quoteStyle": "double"
+  },
+  "linter": {
+    "rules": {
+      "quotes": ["error", "double"],
+      "semi": ["error", "always"],
+      "trailingComma": ["error", "all"],
+      "useImportType": "off",
+      "noUnusedVars": "warn",
+      "noImplicitAny": "error",
+      "noExplicitAny": "warn",
+      "preferConst": "warn",
+      "consistentTypeImports": "warn",
+      "noConsole": "warn",
+      "noDebugger": "error"
     }
+  },
+  "typescript": {
+    "strict": true,
+    "include": ["src/**/*.ts", "src/**/*.tsx"],
+    "exclude": ["node_modules", "dist"]
   }
+}
