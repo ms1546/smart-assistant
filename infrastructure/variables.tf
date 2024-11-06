@@ -5,3 +5,9 @@ variable "aws_region" {
 variable "project_name" {
   default = "smart-assistant"
 }
+
+variable "github_token" {
+  description = "GitHub OAuth Token for Amplify and CodePipeline"
+  type        = string
+  sensitive   = true
+}
