@@ -1,0 +1,32 @@
+<svg width="1024" height="1024" viewBox="250 250 500 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#4F46E5" />
+      <stop offset="100%" stop-color="#3B82F6" />
+    </linearGradient>
+  </defs>
+  <circle cx="512" cy="512" r="512" fill="url(#grad)" />
+
+  <!-- Lightbulb head -->
+  <circle cx="512" cy="400" r="150" fill="white" />
+
+  <!-- Glasses -->
+  <circle cx="462" cy="380" r="40" stroke="black" stroke-width="10" fill="none" />
+  <circle cx="562" cy="380" r="40" stroke="black" stroke-width="10" fill="none" />
+  <rect x="502" y="370" width="20" height="10" fill="black" />
+
+  <!-- Mustache -->
+  <path d="M482 420 Q512 450 542 420 Q522 410 502 420 Q482 410 482 420 Z" fill="black" />
+
+  <!-- Lightbulb base -->
+  <rect x="482" y="500" width="60" height="100" fill="white" />
+  <line x1="482" y1="520" x2="542" y2="520" stroke="black" stroke-width="10" />
+  <line x1="482" y1="540" x2="542" y2="540" stroke="black" stroke-width="10" />
+  <line x1="482" y1="560" x2="542" y2="560" stroke="black" stroke-width="10" />
+
+  <!-- Accent lines around lightbulb -->
+  <path d="M362 400 L412 400" stroke="white" stroke-width="20" />
+  <path d="M612 400 L662 400" stroke="white" stroke-width="20" />
+  <path d="M512 250 L512 200" stroke="white" stroke-width="20" />
+  <path d="M512 550 L512 600" stroke="white" stroke-width="20" />
+</svg>
