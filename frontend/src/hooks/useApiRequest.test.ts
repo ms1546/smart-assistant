@@ -11,6 +11,10 @@ describe("useApiRequest", () => {
 		) as vi.Mock;
 	});
 
+	afterEach(() => {
+		vi.restoreAllMocks();
+	});
+
 	it("sends message and sets response", async () => {
 		const { result } = renderHook(() => useApiRequest());
 
