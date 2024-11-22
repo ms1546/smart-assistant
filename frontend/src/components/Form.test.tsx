@@ -1,12 +1,14 @@
-import { render, screen, fireEvent } from "@testing-library/react";
-import { Form } from "./Form";
-import { vi } from "vitest";
+import { fireEvent, render, screen } from "@testing-library/react";
 import { act } from "react-dom/test-utils";
+import { vi } from "vitest";
+import { Form } from "./Form";
 
 describe("Form", () => {
 	it("renders input and submit button", () => {
 		render(<Form onSubmit={() => {}} />);
-		expect(screen.getByPlaceholderText("Ask me anything...")).toBeInTheDocument();
+		expect(
+			screen.getByPlaceholderText("Ask me anything..."),
+		).toBeInTheDocument();
 		expect(screen.getByText("Send")).toBeInTheDocument();
 	});
 

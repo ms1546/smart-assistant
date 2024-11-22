@@ -1,13 +1,13 @@
-import { renderHook, act } from "@testing-library/react";
-import { useApiRequest } from "./useApiRequest";
+import { act, renderHook } from "@testing-library/react";
 import { vi } from "vitest";
+import { useApiRequest } from "./useApiRequest";
 
 describe("useApiRequest", () => {
 	beforeEach(() => {
 		global.fetch = vi.fn(() =>
 			Promise.resolve({
 				json: () => Promise.resolve({ response: "Mocked response" }),
-			})
+			}),
 		) as vi.Mock;
 	});
 
