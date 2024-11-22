@@ -4,7 +4,7 @@ export function useApiRequest() {
 	const [response, setResponse] = useState("");
 
 	const sendMessage = async (message: string) => {
-		const backendEndpoint = '';
+		const backendEndpoint = "";
 		try {
 			const res = await fetch(backendEndpoint, {
 				method: "POST",
